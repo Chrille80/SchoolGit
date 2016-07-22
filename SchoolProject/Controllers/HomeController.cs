@@ -26,5 +26,7 @@ namespace SchoolProject.Controllers
 
 			return View();
 		}
+
+		//test
 	}
 }
