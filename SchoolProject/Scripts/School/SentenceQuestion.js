@@ -2,7 +2,7 @@
 	var app = angular.module("app");
 
 	app.controller("SentenceQuestionController", function ($scope) {
-		$scope.test = "hello world";
+		$scope.test = "Brynäs är Sveriges bästa hockeylag";
 	});
 
 }());
