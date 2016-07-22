@@ -6,6 +6,12 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+	<script src="~/Scripts/angular.js"></script>
+	<script src="~/Scripts/School/App.js"></script>
+	<script src="~/Scripts/School/ColorQuestion.js"></script>
+	<script src="~/Scripts/School/PictureQuestion.js"></script>
+	<script src="~/Scripts/School/PunctationQuestion.js"></script>
+	<script src="~/Scripts/School/SentenceQuestion.js"></script>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -20,14 +26,15 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("ColorQuestion", "ColorQuestion", "Home")</li>
+                    <li>@Html.ActionLink("PictureQuestion", "PictureQuestion", "Home")</li>
+					<li>@Html.ActionLink("PunctationQuestion", "PunctationQuestion", "Home")</li>
+                    <li>@Html.ActionLink("SentenceQuestion", "SentenceQuestion", "Home")</li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <div class="container body-content" ng-app="app">
         @RenderBody()
         <hr />
         <footer>
