@@ -6,5 +6,17 @@
 <h2>SentenceQuestion</h2>
 
 <div ng-app="app" ng-controller="SentenceQuestionController">
-	{{ test }}
+    <br />
+	{{ initialSentence }}
+
+    <br /><br />
+
+    Bygg en korrekt mening av orden:
+    <input type="text" ng-model="wordAttemptOne" />
+    <input type="text" ng-model="wordAttemptTwo" />
+    <input type="text" ng-model="wordAttemptThree" />
+    <input type="text" ng-model="wordAttemptFour" />
+    <input type="text" ng-model="wordAttemptFive" />
+    <br />
+    <input type="submit" value="Skicka mening" ng-click="CheckSentence()" />
 </div>
