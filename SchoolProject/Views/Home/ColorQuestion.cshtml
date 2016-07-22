@@ -3,8 +3,10 @@
     ViewBag.Title = "ColorQuestion";
 }
 
-<h2>ColorQuestion</h2>
+<h2>Färgfråga</h2>
 
 <div ng-controller="ColorQuestionController">
-	{{ test }}
+    <h2 style="color:{{farg}}">
+        {{ test }} {{farg}}
+    </h2>
 </div>
