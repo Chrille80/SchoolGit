@@ -1,12 +1,25 @@
-﻿
-@{
-    ViewBag.Title = "ColorQuestion";
-}
+﻿<body style="background-color:darkgray">
 
-<h2>Färgfråga</h2>
+    @{
+        ViewBag.Title = "ColorQuestion";
+    }
 
-<div ng-controller="ColorQuestionController">
-    <h2 style="color:{{farg}}">
-        {{ test }} {{farg}}
-    </h2>
-</div>
+    <h2>Färgfråga</h2>
+
+    <div ng-controller="ColorQuestionController">
+
+        <h2 style="color:{{color}}">
+            {{ test }} {{color}}
+        </h2>
+
+        <div class="colorBox" ng-click=" guess('#FFFFFF') "></div>
+        <div class="colorBox2" ng-click=" guess('#FFFF00') " style=" float:left; margin-right 10px; height:50px; width:50px; background-color:#FFFF00"></div>
+        <div class="colorBox" ng-click=" guess('#FF00FF') " style=" float:left; margin-right 10px; height:50px; width:50px; background-color:#FF00FF"></div>
+        <div class="colorBox" ng-click=" guess('#FF0000') " style=" float:left; margin-right 10px; height:50px; width:50px; background-color:#FF0000"></div>
+        <div class="colorBox" ng-click=" guess('#00FFFF') " style=" float:left; margin-right 10px; height:50px; width:50px; background-color:#00FFFF"></div>
+        <div class="colorBox" ng-click=" guess('#00FF00') " style=" float:left; margin-right 10px; height:50px; width:50px; background-color:#00FF00"></div>
+        <div class="colorBox" ng-click=" guess('#0000FF') " style=" float:left; margin-right 10px; height:50px; width:50px; background-color:#0000FF"></div>
+        <div class="colorBox" ng-click=" guess('#000000') " style=" float:left; margin-right 10px; height:50px; width:50px; background-color:#000000"></div>
+        <div style="clear:both"></div>
+    </div>
+</body>
