@@ -4,12 +4,10 @@
     app.controller("PunctationQuestionController", function ($scope) {
 
         // Pågående pillande        
+        //ex. "Hej, hur är läget? Roligt att höra!".replace(/[\,,\.,\?,\!]/g, "*"); -> "Hej* hur är läget* Roligt att höra*"
 
-        $scope.qg = questionGenerator;
-
-        //ex. "Hej, hur är läget? Roligt att höra!".replace(/[\,,\.,\?,\!]/g, "*");
-        var question;
-        var answer;
+      $scope.qg = questionGenerator;
+        var question, answer, questionGenerator;
 
         var punctuationCharsRegExp = /[\,,\.,\?,\!]/g;   // Todo: Lägg till fler
         var replaceChar = "*";
@@ -17,10 +15,10 @@
 
         $scope.answer = punctuationSentences[1];
 
-       var questionGenerator = function () {
-            //question = answer.replace(punctuationCharsRegExp, replaceChar);
-           console.log("Inne i questionGenerator!");
-           return "hej";
+        questionGenerator = function (input) {
+            console.log("Inne i questionGenerator!");
+            output = input.replace(punctuationCharsRegExp, replaceChar);
+            return output;
         }
 
     });
