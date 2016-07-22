@@ -13,19 +13,30 @@ namespace SchoolProject.Controllers
 			return View();
 		}
 
-		public ActionResult About()
+		public ActionResult PictureQuestion()
 		{
-			ViewBag.Message = "Your application description page.";
-
 			return View();
 		}
 
-		public ActionResult Contact()
+		public ActionResult ColorQuestion()
 		{
-			ViewBag.Message = "Your contact page.";
-
 			return View();
 		}
+
+
+		//	public enum Category { Random, Picture, Color, Sentence, Punctuation };
+
+		public ActionResult SentenceQuestion()
+		{
+			return View();
+		}
+
+		public ActionResult PunctationQuestion()
+		{
+			return View();
+		}
+
+
 
 		//test
 	}
