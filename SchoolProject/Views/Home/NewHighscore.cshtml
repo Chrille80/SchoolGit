@@ -2,11 +2,12 @@
 	Layout = null;
 }
 <div ng-controller="NewHighscoreController">
-	<h2>End Of Game</h2>
-	You got a new highscore! Please fill in your name:<br />
-	<input type="text" placeholder="Name"  ng-model="name" /><br />
-	<button ng-click="submitHighscore()">Submit highscore</button><br /><br />
-
-	<button ng-click="selectGame()">Play again</button>
+	<h2>Nytt rekord!</h2>
+	<p>
+		Du slog ett nytt rekord, skriv in ditt namn för att spara rekordet.
+	</p>
+	<input class="form-control" type="text" placeholder="Name" ng-model="name" /><br />
+	<button class="btn btn-success" ng-click="submitHighscore()">Spara rekordet</button>
+	<button class="btn btn-primary" ng-click="selectGame()">Spela igen</button>
 
 </div>

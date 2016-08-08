@@ -6,8 +6,6 @@
 
 
 		$scope.submitHighscore = function (score) {
-			alert('/Highscore/Add?Category='+$scope.game.gameMode.categoryId+'&Name='+$scope.name+'&Score=' +$scope.game.score);
-
 			$http({
 				method: 'GET',
 				url: '/Highscore/Add?Category=' + $scope.game.gameMode.categoryId + '&Name=' + $scope.name + '&Score=' + $scope.game.score
