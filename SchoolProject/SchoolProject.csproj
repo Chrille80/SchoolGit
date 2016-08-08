@@ -118,7 +118,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HighscoreController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DAL\HighscoreService.cs" />
     <Compile Include="DAL\SchoolContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -161,10 +163,26 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\School\App.js" />
     <Content Include="Scripts\School\ColorQuestion.js" />
+    <Content Include="Scripts\School\HighscoresController.js" />
+    <Content Include="Scripts\School\NewHighscoreController.js" />
+    <Content Include="Scripts\School\EndOfGameController.js" />
+    <Content Include="Scripts\School\GameController.js" />
+    <Content Include="Scripts\School\Kategori1Controller.js" />
+    <Content Include="Scripts\School\Kategori2Controller.js" />
+    <Content Include="Scripts\School\Kategori3Controller.js" />
     <Content Include="Scripts\School\PictureQuestion.js" />
     <Content Include="Scripts\School\PunctationQuestion.js" />
+    <Content Include="Scripts\School\SelectGameController.js" />
     <Content Include="Scripts\School\SentenceQuestion.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Home\NewHighscore.cshtml" />
+    <None Include="Views\Home\EndOfGame.cshtml" />
+    <None Include="Views\Home\game.cshtml" />
+    <None Include="Views\Home\Kategori1.cshtml" />
+    <None Include="Views\Home\Kategori2.cshtml" />
+    <None Include="Views\Home\Kategori3.cshtml" />
+    <Content Include="Views\Home\Highscores.cshtml" />
+    <None Include="Views\Home\SelectGame.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -195,7 +213,9 @@
       <DependentUpon>201607221138193_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Highscore\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

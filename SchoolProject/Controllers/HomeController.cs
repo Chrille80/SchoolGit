@@ -23,9 +23,6 @@ namespace SchoolProject.Controllers
 			return View();
 		}
 
-
-		//	public enum Category { Random, Picture, Color, Sentence, Punctuation };
-
 		public ActionResult SentenceQuestion()
 		{
 			return View();
@@ -38,6 +35,45 @@ namespace SchoolProject.Controllers
 
 
 
-		//test
+		public ActionResult EndOfGame()
+		{
+			return View();
+		}
+
+		public ActionResult Kategori1()
+		{
+			return View();
+		}
+
+		public ActionResult Kategori2()
+		{
+			return View();
+		}
+
+		public ActionResult Kategori3()
+		{
+			return View();
+		}
+
+		public ActionResult SelectGame()
+		{
+			return View();
+		}
+
+		public ActionResult Game()
+		{
+			return View();
+		}
+
+		public ActionResult NewHighscore()
+		{
+			return View();
+		}
+
+		public ActionResult Highscores()
+		{
+			return View();
+		}
+
 	}
 }
