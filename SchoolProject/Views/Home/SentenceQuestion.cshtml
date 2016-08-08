@@ -9,8 +9,8 @@
     <br />
 	{{ initialSentence }}
 
-    <br /><br />
-    Bygg en korrekt mening av orden:
+    <br /><br /><br />
+    Bygg en korrekt mening av orden ovan:
     <input type="text" ng-model="wordAttemptOne" />
     <input type="text" ng-model="wordAttemptTwo" />
     <input type="text" ng-model="wordAttemptThree" />
@@ -18,8 +18,11 @@
     <input type="text" ng-model="wordAttemptFive" />
     
     <br />
-    <input type="submit" value="Skicka mening" ng-click="CheckSentence()" />
+    <input type="submit" value="Kontrollera mening" ng-click="CheckSentence()" />
     
     <br /><br />
-    <p>{{answerInformation}}</p>
+    <p ng-show="answerAttempted">{{answerInformation}}</p>
+
+    <br /><br />
+    <input ng-show="answerAttempted" type="submit" value="Gå vidare" ng-click="completeLevel(scoreToSend)" />
 </div>

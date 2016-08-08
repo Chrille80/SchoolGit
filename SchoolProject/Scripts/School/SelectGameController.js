@@ -4,6 +4,7 @@
 
 
 	var SelectGameConstroller = function ($scope) {
+
 	};
 
 	app.controller("SelectGameConstroller", ["$scope", SelectGameConstroller]);

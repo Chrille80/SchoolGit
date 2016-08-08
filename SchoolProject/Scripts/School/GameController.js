@@ -14,10 +14,17 @@
 			score: 0,
 			gameModes:
 				[
-					{ name: "Kategori 1", view: "Kategori1", categoryId: 1 },
-					{ name: "Kategori 2", view: "Kategori2", categoryId: 2 },
-					{ name: "Kategori 3", view: "Kategori3", categoryId: 3 },
+					{ name: "Bild", view: "PictureQuestion", categoryId: 1 },
+					{ name: "Skiljetecken", view: "PunctationQuestion", categoryId: 2 },
+					{ name: "Mening", view: "SentenceQuestion", categoryId: 3 },
+					{ name: "Färg", view: "ColorQuestion", categoryId: 4 },
+
+					//{ name: "Kategori1", view: "Kategori1", categoryId: 1 },
+					//{ name: "Kategori2", view: "Kategori2", categoryId: 2 },
+					//{ name: "Kategori3", view: "Kategori2", categoryId: 3 },
+					//{ name: "Kategori4", view: "Kategori3", categoryId: 4 },
 				],
+			level:0,
 			maxLevel: 0,
 			isRunning: false
 		}

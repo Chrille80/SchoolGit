@@ -1,12 +1,27 @@
-﻿	<div ng-controller="GameController" style="background:#dbdbdb">
-		<div>
-			<b>View:</b> {{subView}} |
-			<b>Level:</b>{{game.level}} / {{game.maxLevel}} |
-			<b>Mode:</b>{{game.gameMode}} |
-			<b>Score:</b>{{game.score}} |
-			<b>Running:</b>{{game.isRunning}}
+﻿<div class="container" ng-controller="GameController">
+	<h2>Spela</h2>
+	<div ng-show="game.isRunning">
+		<h4>Poäng: <b>{{game.score}}</b></h4>
+	</div>
+	<div class="panel panel-default" >
+
+		<div class="panel-body" ng-include="subView">
 		</div>
-		<div style="background:#b38686" ng-include="subView">
+
+	</div>
+
+	<div ng-show="game.isRunning">
+		<div class="progress">
+			<div class="progress-bar" role="progressbar" style="width: {{game.level / game.maxLevel * 100}}%;">
+				Fråga <b>{{game.level}}</b> av <b>{{game.maxLevel}}</b>
+			</div>
 		</div>
 	</div>
 
+	<b>View:</b> {{subView}} |
+	<b>Level:</b>{{game.level}} / {{game.maxLevel}} |
+	<b>Mode:</b>{{game.gameMode}} |
+	<b>Score:</b>{{game.score}} |
+	<b>Running:</b>{{game.isRunning}}
+
+</div>
