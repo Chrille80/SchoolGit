@@ -14,10 +14,10 @@
 			score: 0,
 			gameModes:
 				[
-					{ name: "Bild", view: "PictureQuestion", categoryId: 1 },
-					{ name: "Skiljetecken", view: "PunctationQuestion", categoryId: 2 },
-					{ name: "Mening", view: "SentenceQuestion", categoryId: 3 },
-					{ name: "Färg", view: "ColorQuestion", categoryId: 4 },
+					{ name: "Bild", view: "/Home/PictureQuestion", categoryId: 1 },
+					{ name: "Skiljetecken", view: "/Home/PunctationQuestion", categoryId: 2 },
+					{ name: "Mening", view: "/Home/SentenceQuestion", categoryId: 3 },
+					{ name: "Färg", view: "/Home/ColorQuestion", categoryId: 4 },
 
 					//{ name: "Kategori1", view: "Kategori1", categoryId: 1 },
 					//{ name: "Kategori2", view: "Kategori2", categoryId: 2 },
@@ -51,9 +51,9 @@
 					}).then(function successCallback(response) {
 						
 						if (response.data.success == true)
-							loadView("NewHighscore");
+							loadView("/Home/NewHighscore");
 						else
-							loadView("EndOfGame");
+							loadView("/Home/EndOfGame");
 					}, function errorCallback(response) {
 						alert("error");
 					});
@@ -97,10 +97,10 @@
 
 		$scope.completeLevel = function (score) { completeLevel(score) };
 		$scope.startGame = startGame;
-		$scope.selectGame = function () { loadView("SelectGame") };
-		$scope.showHighscores = function() {loadView("Highscores")};
+		$scope.selectGame = function () { loadView("/Home/SelectGame") };
+		$scope.showHighscores = function () { loadView("/Home/Highscores") };
 
-		loadView("SelectGame");
+		loadView("/Home/SelectGame");
 	};
 
 	app.controller("GameController", ["$scope", "$http", GameController]);
