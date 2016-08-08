@@ -11,10 +11,16 @@
     <span class="punctuationQuestion"> {{ }} </span>
 
     <div>
-        Testing: <br />
-        Answer: {{ answer }} <br />
-        Question:{{ question }}
+        <em>Testing: </em><br />
+        <p> Question:{{ question }}</p>
+        <p> Answer: {{ answer }}</p>
     </div>
+    <div>{{ userInput}}</div>
 
-    <input type="text" />
+    <input ng-change="checkAnswer()" ng-model="userInput" type="text" />
+
+    <div ng-show="isCorrectAnswer">
+        <br />
+        Svaret är rätt! <input ng-click="" type="button" value="Nästa fråga" />
+    </div>
 </div>
