@@ -17,7 +17,7 @@
 
 	        if($scope.progress == 0)
 	        {
-	            $scope.correctAnswer = "Båt";
+	            $scope.correctAnswer = "båt";
 
 	            if($scope.userAnswer == $scope.correctAnswer)
 	            {
@@ -30,12 +30,12 @@
 	            }
 
 	            $scope.progress = 1;
-	            $scope.imageURL = "https://pixabay.com/static/uploads/photo/2015/10/01/17/17/car-967387_960_720.png";
+	            $scope.imageURL = "https://www.discountcar.com/images/cars/large/large-car10.png";
 	        }
 
 	        else if ($scope.progress == 1)
 	        {
-	            $scope.correctAnswer = "Bil";
+	            $scope.correctAnswer = "bil";
 
 	            if ($scope.userAnswer == $scope.correctAnswer)
 	            {
@@ -53,7 +53,7 @@
 
 	        else if ($scope.progress == 2)
 	        {
-	            $scope.correctAnswer = "Tåg";
+	            $scope.correctAnswer = "tåg";
 
 	            if ($scope.userAnswer == $scope.correctAnswer)
 	            {
