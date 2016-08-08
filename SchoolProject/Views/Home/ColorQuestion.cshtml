@@ -2,12 +2,10 @@
     Layout = null;
 }
 
+@{
+    ViewBag.Title = "ColorQuestion";
+}
 
-    @{
-        ViewBag.Title = "ColorQuestion";
-    }
-
-    
 <div class="panel panel-default" style="background-color:darkgray">
     <div ng-controller="ColorQuestionController" class="panel-body">
 
@@ -15,9 +13,7 @@
 
         <h2 style="color:{{color}}">
             {{ test }}
-        </h2>
-
-        <br><br>
+        </h2><br><br>        
 
         <div class="colorBox" ng-click=" guess('#FFFFFF') " style="background-color:#FFFFFF"></div>
         <div class="colorBox" ng-click=" guess('#FFFF00') " style="background-color:#FFFF00"></div>
@@ -30,13 +26,13 @@
         <div style="clear:both"></div><br><br>
 
         <div class="continue">
+
             <div>
                 <h3>{{answer}}</h3>
-            </div>
-            <br>
-           
+            </div><br>
+
             <button type="button" class="btn btn-default" ng-show="answer" ng-click="completeLevel(points)">Fortsätt</button>
-           
+
         </div>
 
     </div>
