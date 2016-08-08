@@ -1,7 +1,7 @@
 ﻿<div class="container" ng-controller="GameController">
 	<h2>Spela</h2>
 	<div ng-show="game.isRunning">
-		<h4>Kategori: <b>{{game.gameMode.name}}</b>, Poäng: <b>{{game.score}}</b></h4>
+		<h4>Poäng: <b>{{game.score}}</b></h4>
 	</div>
 	<div class="panel panel-default" >
 
@@ -9,7 +9,6 @@
 		</div>
 
 	</div>
-
 
 	<div ng-show="game.isRunning">
 		<div class="progress">
