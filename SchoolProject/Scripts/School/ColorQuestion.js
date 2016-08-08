@@ -6,8 +6,8 @@
 		$scope.color = randomWebColor();                                    //Syntax ex: "#FF00FF";
 
 		function randomWebColor(){
-		    var webcolors = new Array("00","FF");
-		    return '#'+webcolors[Math.floor(Math.random()*2)]+webcolors[Math.floor(Math.random()*2)]+webcolors[Math.floor(Math.random()*2)]
+		    var colors = new Array("00","FF");
+		    return '#'+colors[Math.floor(Math.random()*2)]+colors[Math.floor(Math.random()*2)]+colors[Math.floor(Math.random()*2)]
 		}
 
 		$scope.guess = 
