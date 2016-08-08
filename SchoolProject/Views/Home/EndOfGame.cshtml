@@ -2,9 +2,9 @@
 	Layout = null;
 }
 <div ng-controller="EndOfGameController">
-	<h2>Bra jobbat!</h2>
+	<h3>Bra jobbat!</h3>
 	<p>
-	Tyvärr slog du inget rekord, nytt försök?
+	Du fick <b>{{game.score}}</b> poäng, tyvärr räckte det inte för ett nytt rekord.
 	</p>
 	<button ng-click="selectGame()" class="btn btn-success">Prova igen</button>
 	<button ng-click="showHighscores()" class="btn btn-primary">Visa rekord</button>
