@@ -12,7 +12,7 @@ namespace SchoolProject.DAL
 		public DbSet<Highscore> Highscores { get; set; }
 
 		public SchoolContext() : base("DefaultConnection")
-			{
-			}
+		{
+		}
 	}
 }
