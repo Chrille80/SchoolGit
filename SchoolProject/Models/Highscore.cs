@@ -6,7 +6,7 @@ using System.Web;
 
 namespace SchoolProject.Models
 {
-	public enum Category { Random, Picture, Color, Sentence, Punctuation };
+	public enum Category { Random, Picture, Punctation, Sentence, Color };
 
 	public class Highscore
 	{
