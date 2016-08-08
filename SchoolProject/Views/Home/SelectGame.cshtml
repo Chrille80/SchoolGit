@@ -4,10 +4,8 @@
 <div ng-controller="SelectGameConstroller">
 	<h2>Välj kategori:</h2>
 
-	<button ng-click="startGame('Random', 5)">Random</button>
-	<button ng-click="startGame('Kategori 1', 15)">Kategori1</button>
-	<button ng-click="startGame('Kategori 2', 15)">Kategori2</button>
-	<button ng-click="startGame('Kategori 3', 15)">Kategori3</button>
+	<button ng-click="startGame('Random', 15)">Random</button>
+	<button ng-repeat="item in game.gameModes" ng-click="startGame(item.name,5)">{{item.name}}</button>
 	<button ng-click="showHighscores()">Highscores</button>
 
 </div>

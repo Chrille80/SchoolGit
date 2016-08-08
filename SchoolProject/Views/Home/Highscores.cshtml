@@ -3,10 +3,11 @@
 }
 <div ng-controller="HighscoresController">
 	<h2>Highscores</h2>
-	<button ng-click="showHighscoresForCategory(0)">Kategori 0</button>
-	<button ng-click="showHighscoresForCategory(1)">Kategori 1</button>
-	<button ng-click="showHighscoresForCategory(2)">Kategori 2</button>
-	<button ng-click="showHighscoresForCategory(3)">Kategori 3</button>
+
+	<button ng-click="showHighscoresForCategory(0)">Random</button>
+	<button ng-repeat="item in game.gameModes" ng-click="showHighscoresForCategory(item.categoryId)">{{item.name}}</button>
+
+
 	<button ng-click="selectGame()">Play a game</button>
 
 	<div ng-repeat="highscore in highscores">

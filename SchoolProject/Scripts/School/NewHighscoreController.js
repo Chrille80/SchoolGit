@@ -12,7 +12,8 @@
 				method: 'GET',
 				url: '/Highscore/Add?Category=' + $scope.game.gameMode.categoryId + '&Name=' + $scope.name + '&Score=' + $scope.game.score
 			}).then(function successCallback(response) {
-				$scope.$emit("showHighscores");
+				$scope.showHighscores();
+				
 			}, function errorCallback(response) {
 				alert("error");
 			});
