@@ -21,7 +21,7 @@
 			<td>{{highscore.Position}}</td>
 			<td>{{highscore.Name}}</td>
 			<td>{{highscore.Score}}</td>
-			<td>{{highscore.Date}}</td>
+			<td>{{highscore.Date | dateFilter |  date:'yyyy-MM-dd HH:mm'}}</td>
 		</tr>
 	</table>
 	<button type="button" ng-click="selectGame()" class="btn btn-primary">Tillbaka</button>
