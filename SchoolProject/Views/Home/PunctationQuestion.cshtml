@@ -3,23 +3,21 @@
     ViewBag.Title = "PunctationQuestion";
 }
 
-<h2>PunctationQuestion</h2>
+<h2>Öva på skiljetecken</h2>
 
 <div ng-controller="PunctationQuestionController">
 
-    <h3>Ersätt varje asterisk * med rätt skiljetecken</h3>
-    <span class="punctuationQuestion"> {{ }} </span>
+    <h3>Ersätt varje asterisk * med rätt skiljetecken nedan</h3>
+    <p class="pQA">{{ question }}</p>
+    <input class="pQA" ng-change="checkAnswer()" ng-model="userInput" type="text" />
+    <input ng-click="" type="button" value="Kontrollera svar" />
+    <p class="pQA">{{ userInput }}</p>
 
-    <div>
-        <p> Question:{{ question }}</p>
-       <!-- <p> Answer: {{ answer }}</p> --> 
+    <br />
+    <br />
+    <div ng-show="isCorrectAnswer" class="correctAnswer">
+        Du fick X rätt!
+        <input ng-click="completeLevel(7)" type="button" value="Fortsätt" />
     </div>
-    <div>{{ userInput}}</div>
 
-    <input ng-change="checkAnswer()" ng-model="userInput" type="text" />
-
-    <div ng-show="isCorrectAnswer">
-        <br />
-        Svaret är rätt! <input ng-click="" type="button" value="Nästa fråga" />
-    </div>
 </div>

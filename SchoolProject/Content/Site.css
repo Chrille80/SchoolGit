@@ -32,3 +32,11 @@ textarea {
     float:left;
     margin-right: 10px; height:50px; width:50px; background-color:#FFFF00
 }
+
+.pQA {
+    font-size: large;
+}
+
+.QAContainer {
+    height: 75px;
+}
