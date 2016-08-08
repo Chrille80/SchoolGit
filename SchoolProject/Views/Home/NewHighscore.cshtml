@@ -2,9 +2,10 @@
 	Layout = null;
 }
 <div ng-controller="NewHighscoreController">
-	<h2>Nytt rekord!</h2>
+	<h3>Nytt rekord!</h3>
 	<p>
-		Du slog ett nytt rekord, skriv in ditt namn för att spara rekordet.
+	Du fick <b>{{game.score}}</b> poäng, detta är ett nytt rekord!<br />
+	Vänligen fyll i ditt namn nedan för att spara rekordet.
 	</p>
 	<input class="form-control" type="text" placeholder="Name" ng-model="name" /><br />
 	<button class="btn btn-success" ng-click="submitHighscore()">Spara rekordet</button>
