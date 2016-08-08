@@ -2,15 +2,29 @@
 	Layout = null;
 }
 <div ng-controller="HighscoresController">
-	<h2>Highscores</h2>
-
-	<button ng-click="showHighscoresForCategory(0)">Random</button>
-	<button ng-repeat="item in game.gameModes" ng-click="showHighscoresForCategory(item.categoryId)">{{item.name}}</button>
+	<h3>Rekord</h3>
 
 
-	<button ng-click="selectGame()">Play a game</button>
+	<ul class="nav nav-tabs">
+		<li role="presentation" ng-class="(0 == highscoreCategory) ? 'active' : ''"><a href="#" ng-click="showHighscoresForCategory(0)">Slumpat</a></li>
+		<li role="presentation" ng-repeat="item in game.gameModes" ng-class="(item.categoryId == highscoreCategory) ? 'active' : ''"><a href="#" ng-click="showHighscoresForCategory(item.categoryId)">{{item.name}}</a></li>
+	</ul>
 
-	<div ng-repeat="highscore in highscores">
-		{{highscore.Position}} {{highscore.Name}} {{highscore.Score}} {{highscore.Date}}
-	</div>
+	<table class="table table-striped">
+		<tr>
+			<td><b>#</b></td>
+			<td><b>Namn</b></td>
+			<td><b>Poäng</b></td>
+			<td><b>Datum</b></td>
+		</tr>
+		<tr ng-repeat="highscore in highscores">
+			<td>{{highscore.Position}}</td>
+			<td>{{highscore.Name}}</td>
+			<td>{{highscore.Score}}</td>
+			<td>{{highscore.Date | dateFilter |  date:'yyyy-MM-dd HH:mm'}}</td>
+		</tr>
+	</table>
+	<button type="button" ng-click="selectGame()" class="btn btn-primary">Tillbaka</button>
+		
+
 </div>

@@ -2,10 +2,10 @@
 	Layout = null;
 }
 <div ng-controller="SelectGameConstroller">
-	<h2>Välj kategori:</h2>
+	<h3>Välj kategori:</h3>
 
-	<button ng-click="startGame('Random', 15)">Random</button>
-	<button ng-repeat="item in game.gameModes" ng-click="startGame(item.name,5)">{{item.name}}</button>
-	<button ng-click="showHighscores()">Highscores</button>
+	<button ng-click="startGame('Slumpat', 15)" class="btn btn-primary btn-lg btn-block">Slumpat</button>
+	<button ng-repeat="item in game.gameModes" ng-click="startGame(item.name,5)" class="btn btn-primary btn-lg btn-block">{{item.name}}</button>
+	<button ng-click="showHighscores()" class="btn btn-primary btn-lg btn-block">Rekord</button>
 
 </div>

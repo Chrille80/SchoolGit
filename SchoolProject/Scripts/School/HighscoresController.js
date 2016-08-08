@@ -5,8 +5,10 @@
 	var HighscoresController = function ($scope, $http) {
 
 		$scope.highscores = [];
+		$scope.highscoreCategory = $scope.game.gameMode.categoryId;
 
 		$scope.showHighscoresForCategory = function (category) {
+			$scope.highscoreCategory = category;
 			$http({
 				method: 'GET',
 				url: '/Highscore/All?Category=' + category
@@ -19,7 +21,7 @@
 			});
 		}
 
-		$scope.showHighscoresForCategory($scope.game.gameMode.categoryId);
+		$scope.showHighscoresForCategory($scope.highscoreCategory);
 
 	};
 
