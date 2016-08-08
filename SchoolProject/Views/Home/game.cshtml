@@ -1,8 +1,11 @@
 ﻿<div class="container" ng-controller="GameController">
-	<h2>Spela</h2>
-	<div ng-show="game.isRunning">
-		<h4>Poäng: <b>{{game.score}}</b></h4>
-	</div>
+
+
+		<div class="row">
+			<div class="col-md-6"><h2>Spela</h2></div>
+			<div ng-show="game.isRunning" class="col-md-6 text-right"><h2><span class="label label-default">{{game.gameMode.name}}</span> <span class="label label-success">{{game.score}} poäng</span></h2></div>
+		</div>
+	
 	<div class="panel panel-default" >
 
 		<div class="panel-body" ng-include="subView">
@@ -12,7 +15,7 @@
 
 	<div ng-show="game.isRunning">
 		<div class="progress">
-			<div class="progress-bar" role="progressbar" style="width: {{game.level / game.maxLevel * 100}}%;">
+			<div class="progress-bar progress-bar-success" role="progressbar" style="width: {{game.level / game.maxLevel * 100}}%;">
 				Fråga <b>{{game.level}}</b> av <b>{{game.maxLevel}}</b>
 			</div>
 		</div>
