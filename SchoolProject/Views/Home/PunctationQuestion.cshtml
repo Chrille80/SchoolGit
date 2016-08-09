@@ -1,4 +1,7 @@
-﻿
+﻿@{
+    Layout = null;
+}
+
 @{
     ViewBag.Title = "PunctationQuestion";
 }
@@ -10,14 +13,14 @@
     <h3>Ersätt varje asterisk * med rätt skiljetecken nedan</h3>
     <p class="pQA">{{ question }}</p>
     <input class="pQA" ng-change="checkAnswer()" ng-model="userInput" type="text" />
-    <input ng-click="" type="button" value="Kontrollera svar" />
-    <p class="pQA">{{ userInput }}</p>
+    <input ng-click="guess(userInput)" type="button" value="Kontrollera svar" />
+    <!-- <p class="pQA">{{ userInput }}</p> -->
 
-    <br />
-    <br />
-    <div ng-show="isCorrectAnswer" class="correctAnswer">
-        Du fick X rätt!
-        <input ng-click="completeLevel(7)" type="button" value="Fortsätt" />
+    <br>
+    <br>
+    <div ng-show="textanswer" class="correctAnswer">
+        {{textanswer}}
+        <input ng-click="completeLevel(points)" type="button" value="Fortsätt" />
     </div>
 
 </div>

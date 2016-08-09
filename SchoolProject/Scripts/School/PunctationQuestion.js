@@ -17,6 +17,19 @@
         var punctuationCharsRegExp = /[\,,\.,\?,\!]/g;   // Todo: Lägg till fler
         var replaceChar = "*";
 
+        $scope.guess =
+		function guessedColor(guessed) {
+		    if ($scope.answer == guessed) {
+		        $scope.textanswer = "Ditt svar var korrekt";
+		        $scope.points = 1;
+		    }
+		    else {
+		        $scope.textanswer = "Ditt svar var inte korrekt";
+		        $scope.points = 0;
+		    }
+
+		}
+
         $scope.answer = punctuationSentences[0];
         $scope.question = function () {
             return $scope.answer.replace(punctuationCharsRegExp, replaceChar);
