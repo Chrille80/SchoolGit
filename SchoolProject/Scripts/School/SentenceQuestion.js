@@ -39,13 +39,13 @@
 	        if ($scope.points >= $scope.pointsTwo)
 	        {
 	            $scope.answerInformation = "Du fick " + $scope.points + " poäng! " + $scope.correctWords + " korrekt(a) ord, " + $scope.incorrectWords +
-	            " inkorrekt(a) ord, " + $scope.missingWords + " saknade ord.";
+	                " inkorrekt(a) ord, " + $scope.missingWords + " saknade ord.";
 	            $scope.scoreToSend = $scope.points;
 	        }
 	        else
 	        {
 	            $scope.answerInformation = "Du fick " + $scope.pointsTwo + " poäng! " + $scope.correctWordsTwo + " korrekt(a) ord, " + $scope.incorrectWordsTwo +
-	            " inkorrekt(a) ord, " + $scope.missingWordsTwo + " saknade ord.";
+	                " inkorrekt(a) ord, " + $scope.missingWordsTwo + " saknade ord.";
 	            $scope.scoreToSend = $scope.pointsTwo;
 	        } 
 	    }
