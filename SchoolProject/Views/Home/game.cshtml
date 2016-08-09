@@ -15,7 +15,7 @@
 
 	<div ng-show="game.isRunning">
 		<div class="progress">
-			<div class="progress-bar progress-bar-success" role="progressbar" style="width: {{game.level / game.maxLevel * 100}}%;">
+			<div class="progress-bar progress-bar-success" role="progressbar" style="width: {{(game.level + 0.1) / (game.maxLevel + 0.1) * 100}}%;">
 				Fråga <b>{{game.level}}</b> av <b>{{game.maxLevel}}</b>
 			</div>
 		</div>
