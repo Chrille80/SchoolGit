@@ -1,26 +1,23 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "PictureQuestion";
 }
 
-<h2>PictureQuestion</h2>
+<h2>Bildfråga</h2>
 
-<div ng-app="app" ng-controller="PictureQuestionController">
+<div ng-app="app" ng-controller="PictureQuestionController" ng-init="RandomizePicture()">
 
-    
-    <img src="{{imageURL}}"/>
+    <img src="{{imageURL}}" />
     <br /><br />
-
-    <p ng-show="answerAttempted">{{answerInformation}}</p>
-    <br />
 
     <p ng-hide="taskComplete">Vad föreställer bilden?</p>
 
-    <br /><br/>
+    <p ng-show="taskComplete">{{answerInformation}}</p>
+
+    <br /><br />
     <input type="text" ng-model="userAnswer" />
-    
+
     <br /><br />
     <input ng-hide="taskComplete" type="submit" value="Svara" ng-click="CheckPictureGuess()" />
     <input ng-show="taskComplete" type="submit" value="Gå vidare" ng-click="completeLevel(points)" />
-  
+
 </div>

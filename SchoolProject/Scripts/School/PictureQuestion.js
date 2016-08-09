@@ -1,73 +1,45 @@
-﻿(function ()
-{
-	var app = angular.module("app");
+﻿(function () {
+    var app = angular.module("app");
 
-	app.controller("PictureQuestionController", function ($scope)
-	{
-	    $scope.imageURL = "https://www.montereyboats.com/zupload/site-options/328ss-main111.png";
-	    $scope.userAnswer = "", correctAnswer = "";
-	    $scope.progress = 0;
-	    $scope.answerInformation = "";
-	    $scope.answerAttempted = false, $scope.taskComplete = false;
-	    $scope.points = 0;
+    app.controller("PictureQuestionController", function ($scope) {
+        $scope.imageURL = "";
+        $scope.userAnswer = "", $scope.userAnswerLowerCase = "", $scope.correctAnswer = "";
+        $scope.answerInformation = "";
+        $scope.taskComplete = false;
+        $scope.points = 0;
+        $scope.pictureSelect = 0;
 
-	    $scope.CheckPictureGuess = function () 
-	    {
-	        $scope.answerAttempted = true;
+        $scope.RandomizePicture = function () {
+            $scope.pictureSelect = Math.floor(Math.random() * 3);
 
-	        if($scope.progress == 0)
-	        {
-	            $scope.correctAnswer = "båt";
+            if ($scope.pictureSelect == 0) {
+                $scope.imageURL = "https://www.montereyboats.com/zupload/site-options/328ss-main111.png";
+                $scope.correctAnswer = "båt";
+            }
+            if ($scope.pictureSelect == 1) {
+                $scope.imageURL = "https://www.discountcar.com/images/cars/large/large-car10.png";
+                $scope.correctAnswer = "bil";
+            }
+            if ($scope.pictureSelect == 2) {
+                $scope.imageURL = "http://product-images.imshopping.com/nimblebuy/67-off-polar-express-728842-regular.jpg";
+                $scope.correctAnswer = "tåg";
+            }
+        }
 
-	            if($scope.userAnswer == $scope.correctAnswer)
-	            {
-	                $scope.points = $scope.points + 1;
-                    $scope.answerInformation = "Rätt!"
-	            }
-	            else
-	            {
-	                $scope.answerInformation = "Fel. Rätt svar var Båt";
-	            }
+        $scope.CheckPictureGuess = function () {
+            $scope.userAnswerLowerCase = $scope.userAnswer.toLowerCase();
 
-	            $scope.progress = 1;
-	            $scope.imageURL = "https://www.discountcar.com/images/cars/large/large-car10.png";
-	        }
+            if ($scope.userAnswerLowerCase == $scope.correctAnswer) {
+                $scope.points = 1;
+                $scope.answerInformation = "Rätt!";
+            }
+            else {
+                $scope.answerInformation = "Fel. Rätt svar var: " + $scope.correctAnswer + ".";
+            }
 
-	        else if ($scope.progress == 1)
-	        {
-	            $scope.correctAnswer = "bil";
+            $scope.taskComplete = true;
+        }
 
-	            if ($scope.userAnswer == $scope.correctAnswer)
-	            {
-	                $scope.points = $scope.points + 1;
-	                $scope.answerInformation = "Rätt!"
-	            }
-	            else
-	            {
-	                $scope.answerInformation = "Fel. Rätt svar var Bil";
-	            }
-
-	            $scope.progress = 2;
-	            $scope.imageURL = "http://product-images.imshopping.com/nimblebuy/67-off-polar-express-728842-regular.jpg";
-	        }
-
-	        else if ($scope.progress == 2)
-	        {
-	            $scope.correctAnswer = "tåg";
-
-	            if ($scope.userAnswer == $scope.correctAnswer)
-	            {
-	                $scope.points = $scope.points + 1;
-	                $scope.answerInformation = "Rätt! Du fick totalt " + $scope.points + " poäng!"
-	            }
-	            else
-	            {
-	                $scope.answerInformation = "Fel. Rätt svar var Tåg. Du fick totalt " + $scope.points + " poäng!";
-	            }
-
-	            $scope.taskComplete = true;
-	        }
-	    }
-	});
+    });
 
 }());
