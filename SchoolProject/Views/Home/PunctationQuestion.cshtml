@@ -1,5 +1,5 @@
 ﻿@{
-    Layout = null;
+   // Layout = null;
 }
 
 @{
@@ -8,19 +8,17 @@
 
 <h2>Öva på skiljetecken</h2>
 
-<div ng-controller="PunctationQuestionController">
+<div ng-app="app" ng-controller="PunctationQuestionController" ng-init="RandomizePunctuationQuestion()">
 
     <h3>Ersätt varje asterisk * med rätt skiljetecken nedan</h3>
-    <p class="pQA">{{ question }}</p>
-    <input class="pQA" ng-change="checkAnswer()" ng-model="userInput" type="text" />
-    <input ng-click="guess(userInput)" type="button" value="Kontrollera svar" />
+    <p>{{question()}}</p>
+    <input ng-model="userInput" type="text" />
+    <input ng-click="checkAnswer()" type="button" value="Kontrollera svar" />
     <!-- <p class="pQA">{{ userInput }}</p> -->
-
     <br>
     <br>
-    <div ng-show="textanswer" class="correctAnswer">
+    <div ng-show="answerMade" class="correctAnswer">
         {{textanswer}}
         <input ng-click="completeLevel(points)" type="button" value="Fortsätt" />
     </div>
-
 </div>
